@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=45", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "swaycap"
+version = "1.0.0"
+description = "Screen capture tool for Sway/Wayland"
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = [
+    "pygobject",
+]
+
+[project.scripts]
+swaycap = "swaycap.cli:main"
+
+[project.gui-scripts]
+swaycap-gui = "swaycap.gui:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["swaycap*"]

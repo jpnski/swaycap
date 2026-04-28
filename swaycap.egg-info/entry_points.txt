@@ -1,0 +1,5 @@
+[console_scripts]
+swaycap = swaycap.cli:main
+
+[gui_scripts]
+swaycap-gui = swaycap.gui:main

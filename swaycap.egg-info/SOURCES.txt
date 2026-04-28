@@ -1,0 +1,13 @@
+pyproject.toml
+swaycap/__init__.py
+swaycap/__main__.py
+swaycap/capture.py
+swaycap/cli.py
+swaycap/config.py
+swaycap/gui.py
+swaycap.egg-info/PKG-INFO
+swaycap.egg-info/SOURCES.txt
+swaycap.egg-info/dependency_links.txt
+swaycap.egg-info/entry_points.txt
+swaycap.egg-info/requires.txt
+swaycap.egg-info/top_level.txt
