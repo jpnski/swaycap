@@ -39,6 +39,33 @@ pip install .
 
 This installs the `swaycap` CLI command and `swaycap-gui` GUI command.
 
+### Application Launcher (rofi, etc.)
+
+To make `swaycap gui` searchable in rofi's `drun` mode (or other XDG desktop
+entry launchers), create a desktop entry file:
+
+```bash
+mkdir -p ~/.local/share/applications
+
+cat > ~/.local/share/applications/swaycap.desktop << 'EOF'
+[Desktop Entry]
+Type=Application
+Name=SwayCap
+Comment=Screen capture tool for Sway/Wayland
+Exec=swaycap gui
+Icon=camera-photo
+Terminal=false
+Categories=Utility;Graphics;
+EOF
+```
+
+If swaycap doesn't appear immediately after creating the file, refresh rofi's
+cache:
+
+```bash
+rm -f ~/.cache/rofi*
+```
+
 ## Configuration
 
 The configuration file is located at `~/.config/swaycap/swaycap.conf`. It is created automatically on first run with default values.
